@@ -39,7 +39,8 @@ You can tweak the "dust" balance for your sh!tcoins
 ```
 
 ## Screenshot
-![alt tag](https://raw.github.com/sQu1rr/binance-dust-sweeper/assets/img/screenshot.png)
+![alt tag](https://raw.github.com/sQu1rr/binance-dust-sweeper/assets/img/screenshot1.png)
+![alt tag](https://raw.github.com/sQu1rr/binance-dust-sweeper/assets/img/screenshot2.png)
 
 ## If you found the utility useful
 
