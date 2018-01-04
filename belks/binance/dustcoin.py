@@ -56,9 +56,12 @@ class DustCoin:
         cost = self._calc_buy(market) * ask - self._calc_sell(market) * bid
         return self.exchange.to_usdt(market, cost)
 
-    def _get_dust(self, market):
+    def _get_dust(self, market, amount=None):
+        if amount is None:
+            amount = self.balance
+
         coin = self.exchange.coins[self.ticker][market]
-        qty = self.balance / coin['step']
+        qty = amount / coin['step']
         return (qty - math.floor(qty)) * coin['step']
 
     def has_dust(self):
@@ -105,6 +108,15 @@ class DustCoin:
         if result['market'] not in coins and result['dust'] > 0:
             result['state'] = 'SKIPPING: Account does not own any ' + market
             return False
+
+        if self._get_dust(result['market'], result['buy']) > 0:
+            result['state'] = 'SKIPPING: Dust cannot be sweeped using ' + market
+            return False
+
+        if self._get_dust(result['market'], result['sell']) > 0:
+            result['state'] = 'SKIPPING: Dust cannot be sweeped using ' + market
+            return False
+
 
         ask = self.exchange.coins[self.ticker][market]['ask']
         buy = result['buy'] * ask
