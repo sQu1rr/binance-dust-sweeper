@@ -38,6 +38,9 @@ You can tweak the "dust" balance for your sh!tcoins
 ./dustsweeper.py -b 0.001 #BTC
 ```
 
+## Screenshot
+![alt tag](https://raw.github.com/sQu1rr/binance-dust-sweeper/assets/img/screenshot.png)
+
 ## If you found the utility useful
 
 *BTC*: 15WVMwYG7SKW7oTuxxTnJuWsd94on3emU8
