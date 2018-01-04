@@ -10,6 +10,31 @@ installed:
 pip3 install --user python-binance simple-crypt
 ```
 
+## Copy-Paste instructions from reddit (raw comment)
+
+
+Writing instructions is definitely not something I'm good at, hence the repository is missing them. In brief, after installing the dependencies, simply run the script with
+
+```bash
+./dustsweeper.py --dry-run
+```
+
+and follow the interactive process. The script will not commit anything when --dry-run option is set. The script will prompt for the API key and secret which you can get form the binance account page.
+
+I personally use
+
+```bash
+./dustweeper.py -p btc,bnb
+```
+
+^ that lets me sell other "primary" coins like eth and usdt and assumes i don't want to convert into them. (i only use btc and bnb as base coins on binance)
+
+You don't need to give the script the priveleges to commit the orders if you don't want to. You can simply execute yourself the proposed amounts which you get by dry-running or --test-order.
+
+This will only work when you DISABLE the bnb discount for BUY orders (the script will prompt you to do so and wait till you do)
+
+Note: if you decide to save your API key and secret they will be securely ecnrypted. You don't have to save them
+
 ## Usage
 
 Interactive interface will guide you through
