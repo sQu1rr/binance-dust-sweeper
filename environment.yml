@@ -1,0 +1,8 @@
+name: binance-dust-sweeper
+dependencies:
+- python
+- twisted
+- pycrypto
+- pip:
+  - python-binance
+  - simple-crypt
