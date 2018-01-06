@@ -11,7 +11,7 @@ pip3 install --user python-binance simple-crypt
 ```
 
 ### Windows
-The easiest way to install on Windows is to use the [Miniconda](https://conda.io/miniconda.html). Download and install either the Python 3.6 or Python 2.7 version. Once installed go to the directory where you cloned the Binance Dust Sweeper repo. Then type:
+The easiest way to install on Windows is to use [Miniconda](https://conda.io/miniconda.html). Download and install either the Python 3.6 or Python 2.7 version. Once installed go to the directory where you cloned the Binance Dust Sweeper repo. Then type:
 
 ```bash
 conda env create
