@@ -24,4 +24,4 @@ class Account:
         self.coins[coin['ticker']] = coin
 
     def has_bnb(self):
-        return self.coins['BNB']['balance'] > 0
+        return ('BNB' in self.coins) and (self.coins['BNB']['balance'] > 0)
